@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../widgets/button_widget.dart';
+
 class TimerPage extends StatefulWidget {
   const TimerPage({super.key});
 
@@ -61,7 +63,7 @@ class _TimerPageState extends State<TimerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.white10,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text('Flutter StopWatch Timer Demo'),
@@ -136,7 +138,7 @@ class _TimerPageState extends State<TimerPage> {
           Text(
             header,
             style: const TextStyle(
-              color: Colors.black45,
+              color: Colors.white,
             ),
           ),
         ],
@@ -170,34 +172,7 @@ class _TimerPageState extends State<TimerPage> {
             text: 'Start Timer!',
             onClicked: () {
               startTimer();
-            });
-  }
-}
-
-class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({
-    super.key,
-    required this.text,
-    this.color = Colors.white,
-    this.backgroundColor = Colors.black,
-    required this.onClicked,
-  });
-  final String text;
-  final Color color;
-  final Color backgroundColor;
-  final VoidCallback onClicked;
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onClicked,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 20,
-          color: color,
-        ),
-      ),
-    );
+            },
+          );
   }
 }
