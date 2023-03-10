@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/styles/themes.dart';
-
-import 'screens/home.dart';
 
 void main() {
   // 1
-  runApp(const MyApp());
+  runApp(const FoodApp());
 }
 
-class MyApp extends StatelessWidget {
+class FoodApp extends StatelessWidget {
   // 2
-  const MyApp({super.key});
-
+  const FoodApp({super.key});
   @override
   Widget build(BuildContext context) {
-    // Create theme
-    final theme = AppTheme.dark();
+    // TODO: Create theme
+    // TODO: Apply Home widget
+    // 3
     return MaterialApp(
-      title: 'Food App',
-      theme: theme,
-      home: const Home(),
+      // TODO: Add theme
+      title: 'Fooderlich',
+      // 4
+      home: Scaffold(
+        // TODO: Style the title
+        appBar: AppBar(title: const Text('Fooderlich')),
+        // TODO: Style the body text
+        body: const Center(child: Text('Let\'s get cooking 👩‍🍳')),
+      ),
     );
   }
 }
